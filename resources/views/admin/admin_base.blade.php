@@ -61,6 +61,11 @@
             <i class="fas fa-tshirt"></i>
             <span>Add Product</span></a>
       </li>
+      <li class="nav-item active">
+          <a class="nav-link" href="/admin/productlist">
+            <i class="fas fa-tshirt"></i>
+            <span>Product List</span></a>
+      </li>
 
       <!-- Divider -->
       <hr class="sidebar-divider">

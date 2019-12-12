@@ -38,6 +38,10 @@ Route::get('/admin/profile','UserController@profile');
 
 Route::get('/admin/customers','UserController@customers');
 
+Route::get('/admin/customers','UserController@customers');
+
+Route::get('/admin/productlist','ProductController@list');
+
 Route::get('/admin/addproduct','ProductController@index');
 Route::post('/admin/addproduct','ProductController@insert');
 

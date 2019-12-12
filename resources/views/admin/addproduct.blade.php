@@ -1,22 +1,25 @@
 @extends('admin.admin_base')
 
 @section('content')
+@foreach ($errors->all() as $error)
+<p class="alert alert-danger">{{$error}}</p>
+@endforeach
 <form method="POST" class="container shadow-lg p-3 mb-5 bg-blue rounded" enctype="multipart/form-data">
     @csrf
     <div class="card">
         <div class="card-body">
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Select Category</label>
-                <select class="form-control" id="exampleFormControlSelect1" name="gender" required>
-                    <option selected>Select Category</option>
+                <select class="form-control" id="exampleFormControlSelect1" name="gender">
+                    <option>Select Category</option>
                     <option>Male</option>
                     <option>Female</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Select Product</label>
-                <select class="form-control" id="exampleFormControlSelect1" name="product" required>
-                    <option selected>Select Product</option>
+                <select class="form-control" id="exampleFormControlSelect1" name="product">
+                    <option>Select Product</option>
                     <option value="shirt">Shirt</option>
                     <option value="pant">Pant</option>
                     <option value="salwar">Salwar</option>
@@ -25,7 +28,7 @@
             </div>
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Add A Small Description</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" name="desc" rows="3" required></textarea>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name="desc" rows="3"></textarea>
             </div>
             <div class="form-group">
                 <label for="exampleFormControlTextarea1">Select Sizes:  </label>
