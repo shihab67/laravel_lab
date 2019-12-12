@@ -15,21 +15,25 @@ class LoginController extends Controller
         ->where('password', $req->password)
         ->first();
         
-        
-        if($user->type == 1){
+        if(!$user){
+            $req->session()->flash('msg', 'invalid username or password');
+            return redirect('/login');
+        }
+        if($user->status == 0){
+            return redirect('/login')->with('status',"Your Account Has Not Activated Yet!!");
+        }
+        if($user->type == 0){
             $req->session()->put('name', $user->name);
             $req->session()->put('id', $user->id);
             return redirect('/admin/home');
         }
-        if($user->type == 2){
-            return redirect('/manager/home');
+        if($user->type == 1){
+            $req->session()->put('name', $user->name);
+            $req->session()->put('id', $user->id);
+            return redirect('/user/home');
         } 
-        else{
-            $req->session()->flash('msg', 'invalid username or password');
-            return redirect('/login');
-            }
         //$req->session()->put('name', $req->input('username'));
         $req->session()->put('name', $user->name);
-        $req->session()->put('id', $user[0]->id);
+       // $req->session()->put('id', $user[0]->id);
     }
 }

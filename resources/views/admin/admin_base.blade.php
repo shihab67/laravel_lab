@@ -30,11 +30,11 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/admin/home">
         <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-laugh-wink"></i>
+          <i class="fas fa-user-shield"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+        <div class="sidebar-brand-text mx-3">Admin Dashboard</div>
       </a>
 
       <!-- Divider -->
@@ -45,6 +45,21 @@
         <a class="nav-link" href="/admin/home">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/admin/approvals">
+          <i class="fas fa-thumbs-up"></i>
+          <span>Approvals</span></a>
+      </li>
+      <li class="nav-item active">
+          <a class="nav-link" href="/admin/customers">
+            <i class="fas fa-users"></i>
+            <span>Customers</span></a>
+      </li>
+      <li class="nav-item active">
+          <a class="nav-link" href="/admin/addproduct">
+            <i class="fas fa-tshirt"></i>
+            <span>Add Product</span></a>
       </li>
 
       <!-- Divider -->

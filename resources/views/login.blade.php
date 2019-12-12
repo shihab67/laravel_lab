@@ -1,6 +1,16 @@
 @extends('base')
 
 @section('content')
+@if(session()->has('message'))
+  <div class="alert alert-danger">
+      {{ session()->get('message') }}
+  </div>
+@endif
+@if(session()->has('status'))
+  <div class="alert alert-danger">
+      {{ session()->get('status') }}
+  </div>
+@endif
 <div class="card card-login mx-auto mt-5">
         <div class="card-header">Login</div>
         <div class="card-body">
@@ -19,6 +29,7 @@
               </div>
             </div>
             <button type="submit" class="btn btn-primary btn-block">Login</button>
+            <a href="/" class="btn btn-warning btn-block">Cancel</a>
           </form>
           <div>
             {{session('msg')}}

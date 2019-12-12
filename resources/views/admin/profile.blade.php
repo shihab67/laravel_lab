@@ -2,6 +2,7 @@
 
 @section('content')
 <form method="POST" class="container shadow-lg p-3 mb-5 bg-blue rounded" style="opacity:0.7;background:white">
+    @csrf
         <div class="form-group" style="color:black">
             <label>Name</label>
             <input style="color:black" type="text" class="form-control form-control-lg" id="name" aria-describedby="e" placeholder="" value="{{$data->name}}" readonly>

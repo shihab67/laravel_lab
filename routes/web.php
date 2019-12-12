@@ -18,8 +18,8 @@ Route::get('/', function () {
 Route::get('/admin/home', function () {
     return view('admin.index')->with('title',"Admin Home");
 });
-Route::get('/manager/home', function () {
-    return view('manager.index')->with('title',"Manager Home");
+Route::get('/user/home', function () {
+    return view('user.index')->with('title',"User Home");
 });
 
 Route::get('/login', function () {
@@ -27,8 +27,29 @@ Route::get('/login', function () {
 });
 Route::post('/login','LoginController@verify');
 
+Route::get('/register', function () {
+    return view('user.register')->with('title','Register');
+});
+Route::post('/register','RegisterController@create');
+
+Route::post('/login','LoginController@verify');
+
 Route::get('/admin/profile','UserController@profile');
+
+Route::get('/admin/customers','UserController@customers');
+
+Route::get('/admin/addproduct','ProductController@index');
+Route::post('/admin/addproduct','ProductController@insert');
+
+Route::get('/admin/customers/delete/{id}','UserController@delete')->name('delete');
+Route::post('/admin/customers/delete/{id}','UserController@destroy_customer');
 
 Route::get('/admin/settings','UserController@settings');
 Route::post('/admin/settings','UserController@update_profile');
+
+
+Route::get('/admin/approvals','UserController@approve_list');
+
+Route::get('/admin/approvals/{id}','UserController@approve_page')->name('approve');
+Route::post('/admin/approvals/{id}','UserController@approve');
 
