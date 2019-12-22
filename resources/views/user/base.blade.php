@@ -26,10 +26,10 @@
                 <a class="nav-link" href="/user/productlist">Product List</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/user/profile">Add Image</a>
+              <a class="nav-link" href="/user/profile">Profile</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle dropdown-menu-right" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Dropdown
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">

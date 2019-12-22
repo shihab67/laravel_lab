@@ -64,4 +64,11 @@ class UserController extends Controller
         $message='User' ."".$request->name."". 'Has Been Deleted!!';
 		return redirect('/admin/customers')->with('message',$message);
     }
+
+    public function profile_user()
+    {
+        $data  = User::all()->where('id', session('id'))->first();
+        //return $data;
+        return view('user.profile')->with('data', $data);
+    }
 }

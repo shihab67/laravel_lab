@@ -69,3 +69,4 @@ Route::post('/admin/productlist/delete/{id}','ProductController@destroy_product'
 
 Route::get('/user/productlist','ProductController@list_user');
 
+Route::get('/user/profile','UserController@profile_user');
