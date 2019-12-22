@@ -57,3 +57,9 @@ Route::get('/admin/approvals','UserController@approve_list');
 Route::get('/admin/approvals/{id}','UserController@approve_page')->name('approve');
 Route::post('/admin/approvals/{id}','UserController@approve');
 
+Route::get('/admin/productlist/edit/{id}','ProductController@edit_product')->name('image.edit');
+Route::post('/admin/productlist/edit/{id}','ProductController@update_product')->name('image.update');
+
+
+Route::get('/admin/productlist/delete/{id}','ProductController@delete_product')->name('image.delete');
+Route::post('/admin/productlist/delete/{id}','ProductController@destroy_product')->name('image.destroy');
