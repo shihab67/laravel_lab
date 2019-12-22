@@ -29,14 +29,13 @@
               <a class="nav-link" href="/user/profile">Profile</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle dropdown-menu-right" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </a>
+              <span class="nav-link dropdown-toggle dropdown-menu-right" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Settings
+              </span>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="/user/settings">Edit Profile</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
+                <a class="dropdown-item" href="/logout">Logout</a>
               </div>
             </li>
         </div>

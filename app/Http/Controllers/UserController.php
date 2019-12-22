@@ -71,4 +71,22 @@ class UserController extends Controller
         //return $data;
         return view('user.profile')->with('data', $data);
     }
+
+    public function settings_user()
+    {
+        $data  = User::all()->where('id', session('id'))->first();
+        //return $data;
+        return view('user.settings')->with('data', $data);
+    }
+
+    public function update_profile_user(Request $request)
+    {
+        $data  = User::all()->where('id', session('id'))->first();
+        //return $data;
+        $data->name =  $request->get('name');
+		$data->contact =  $request->get('contact');
+		$data->password =  $request->get('password');
+        $data->save();
+        return redirect('/user/profile');
+    }
 }

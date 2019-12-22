@@ -70,3 +70,7 @@ Route::post('/admin/productlist/delete/{id}','ProductController@destroy_product'
 Route::get('/user/productlist','ProductController@list_user');
 
 Route::get('/user/profile','UserController@profile_user');
+
+
+Route::get('/user/settings','UserController@settings_user');
+Route::post('/user/settings','UserController@update_profile_user');
