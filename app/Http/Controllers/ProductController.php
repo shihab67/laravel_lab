@@ -79,4 +79,10 @@ class ProductController extends Controller
         return redirect('/admin/productlist');
     }
 
+    public function list_user()
+    {
+        $product = Product::all();
+        return view('user.product_list')->with("data", $product);
+    }
+
 }

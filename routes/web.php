@@ -66,3 +66,6 @@ Route::post('/admin/productlist/edit/{id}','ProductController@update_product')->
 
 Route::get('/admin/productlist/delete/{id}','ProductController@delete_product')->name('image.delete');
 Route::post('/admin/productlist/delete/{id}','ProductController@destroy_product')->name('image.destroy');
+
+Route::get('/user/productlist','ProductController@list_user');
+
