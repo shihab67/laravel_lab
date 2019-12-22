@@ -15,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome')->with('title',"Welcome");
 });
+
+Route::get('/logout', 'LogoutController@index');
+
 Route::get('/admin/home', function () {
     return view('admin.index')->with('title',"Admin Home");
 });
